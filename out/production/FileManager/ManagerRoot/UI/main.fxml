@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.SwingNode?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="623.0" prefWidth="962.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagerRoot.UI.MainController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+      <HBox fx:id="itemBar" alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="962.0" spacing="3.0" style="-fx-background-color: #bdc3c7;" />
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" prefHeight="504.0" prefWidth="962.0">
+         <content>
+            <HBox fx:id="hboxInScrollPane">
+               <children>
+                  <TilePane fx:id="mainItemsPane" hgap="15.0" maxHeight="510.0" maxWidth="1.7976931348623157E308" prefHeight="102.0" prefWidth="26.0" vgap="15.0">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: #bdc3c7; -fx-border-width: 3;">
+                           <children>
+                              <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@images/folder.png" />
+                                 </image>
+                              </ImageView>
+                              <SwingNode />
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="90.0" text="Label" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </TilePane>
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+      <HBox prefHeight="48.0" prefWidth="962.0" spacing="4.0" style="-fx-background-color: #34495e;">
+         <children>
+            <CheckBox fx:id="hiddenChoice" mnemonicParsing="false" onAction="#hidden" prefHeight="42.0" prefWidth="175.0" style="-fx-background-color: #ecf0f1;" text="Show Hidden">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </HBox>
+  </children>
+</VBox>
